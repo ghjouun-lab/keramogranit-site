@@ -23,7 +23,7 @@ p{margin:0}
 .cond{font-family:'Barlow Condensed',sans-serif}
 
 /* stage: fixed 1440 design canvas, scaled to viewport */
-#scaler{width:100%;overflow:hidden;display:flex;justify-content:center}
+#scaler{width:100%;overflow:hidden;display:flex;justify-content:center;align-items:flex-start}
 #stage{width:1440px;transform-origin:top center;background:var(--bg)}
 
 /* ============ HEADER ============ */
@@ -221,6 +221,67 @@ p{margin:0}
 .dir__cta h4{font-weight:700;font-size:16px;color:#333;margin:0}
 .dir__cta p{font-weight:400;font-size:13px;line-height:20px;color:var(--muted);margin-top:8px}
 .dir__cta a{border:1.5px solid var(--ink);border-radius:4px;padding:16px 32px;font-weight:700;font-size:13px;letter-spacing:.5px;color:var(--ink);text-decoration:none;white-space:nowrap}
+
+/* ============ PORTFOLIO ============ */
+.pf{background:var(--bg2);padding:120px 80px;border-top:1px solid var(--line)}
+.pf *{box-sizing:border-box}
+.pf__head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:56px}
+.pf__marker{display:flex;gap:12px;align-items:center;margin-bottom:16px}
+.pf__marker b{font-weight:700;font-size:13px;letter-spacing:2px;color:var(--accent)}
+.pf__marker i{width:32px;height:1px;background:var(--accent)}
+.pf__marker span{font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.pf__title{font-weight:800;font-size:48px;letter-spacing:-2px;color:var(--ink)}
+.pf__intro{font-weight:400;font-size:14px;line-height:22px;color:var(--ink2);text-align:right;width:380px}
+
+.pf__grid{display:flex;flex-wrap:wrap;align-items:stretch;gap:40px}
+
+.case{width:400px;background:#fefefe;border:1px solid #f1f1f1;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.case__ph{position:relative;height:330px;overflow:hidden;background:var(--panel);flex:none}
+.case__ph img{width:100%;height:100%;object-fit:cover}
+.case__ph .grad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.34) 0%,rgba(0,0,0,0) 26%,rgba(0,0,0,0) 44%,rgba(0,0,0,.62) 100%)}
+.case__n{position:absolute;left:20px;top:10px;font-weight:600;font-size:56px;letter-spacing:-1px;line-height:1;color:#fff;opacity:.55}
+.case__obj{position:absolute;left:20px;right:20px;bottom:18px}
+.case__obj b{display:block;font-weight:700;font-size:11px;letter-spacing:1px;color:#fff}
+.case__obj em{display:block;font-style:normal;font-weight:500;font-size:9px;letter-spacing:.9px;color:#fff;opacity:.72;margin-top:6px}
+.case__body{flex:1;padding:20px;display:flex;flex-direction:column;gap:14px}
+.case__ey{font-weight:700;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.case__t{font-weight:700;font-size:16px;line-height:23px;color:var(--ink)}
+.case__spec{display:flex;flex-direction:column;gap:9px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0}
+.case__spec .r{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.case__spec .r p{font-weight:600;font-size:10px;letter-spacing:1px;color:var(--muted);white-space:nowrap}
+.case__spec .r em{font-style:normal;font-weight:700;font-size:11px;color:var(--ink3);text-align:right}
+.case__hard p{font-weight:700;font-size:10px;letter-spacing:1.5px;color:var(--accent2)}
+.case__hard .tg{font-weight:500;font-size:9px;letter-spacing:.8px;line-height:15px;color:var(--muted2);margin-top:6px}
+.case__desc{font-weight:400;font-size:13px;line-height:20px;color:var(--ink2)}
+.case__proof{display:flex;flex-direction:column;gap:9px}
+.case__proof .ann{display:flex;gap:8px;align-items:center;font-weight:600;font-size:10px;letter-spacing:1px;color:var(--ink3);white-space:nowrap}
+.case__proof .ann .dot{width:6px;height:6px;border-radius:50%;background:var(--accent2);flex:none}
+.case__proof .ann .ln{width:24px;height:1px;background:var(--accent2);opacity:.6;flex:none}
+.case__link{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:14px;border-top:1px solid var(--line);text-decoration:none}
+.case__link b{font-weight:700;font-size:12px;letter-spacing:.5px;color:#000}
+.case__link span{font-weight:300;font-size:18px;color:var(--accent2)}
+
+.case--lead{width:840px;flex-direction:row}
+.case--lead .case__ph{width:400px;height:auto;flex:none}
+.case--lead .case__n{font-size:72px}
+.case--lead .case__body{width:440px;padding:28px}
+.case--lead .case__t{font-size:22px;line-height:29px;letter-spacing:-.4px}
+.case--lead .case__body{justify-content:space-between}
+
+.pf__cta{position:relative;overflow:hidden;width:840px;background:#1a1a1a;border-radius:14px;padding:36px 40px;display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+.pf__cta .bp{position:absolute;inset:0;opacity:.07;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,0) 10%,#000 58%);mask-image:linear-gradient(180deg,rgba(0,0,0,0) 10%,#000 58%)}
+.pf__cta .bp img{width:100%;height:100%;object-fit:cover;object-position:bottom}
+.pf__cta>div{position:relative;z-index:1}
+.pf__cta .ey{font-weight:700;font-size:11px;letter-spacing:1.5px;color:var(--accent)}
+.pf__cta h4{font-weight:800;font-size:28px;line-height:34px;letter-spacing:-.8px;color:#fff;margin:16px 0 0}
+.pf__cta .p{font-weight:400;font-size:13px;line-height:20px;color:#b3aea6;margin-top:14px;max-width:560px}
+.pf__cta .pr{display:flex;flex-direction:column;gap:11px;margin-top:28px}
+.pf__cta .pr .ann{display:flex;gap:8px;align-items:center;font-weight:600;font-size:10px;letter-spacing:1px;color:#e3ded5;white-space:nowrap}
+.pf__cta .pr .ann .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+.pf__cta .pr .ann .ln{width:24px;height:1px;background:var(--accent);opacity:.5;flex:none}
+.pf__cta .act{display:flex;gap:28px;align-items:center}
+.pf__cta .btn{border:1.5px solid var(--accent);border-radius:4px;padding:16px 32px;font-weight:700;font-size:13px;letter-spacing:.5px;color:var(--accent);text-decoration:none;white-space:nowrap}
+.pf__cta .lnk{font-weight:500;font-size:13px;color:#98938b;text-decoration:none;white-space:nowrap}
 
 @media(max-width:640px){#stage{background:var(--bg)}}
 </style>
@@ -509,6 +570,194 @@ p{margin:0}
         <p>Отправьте проект, фото или размеры — определим направление и сделаем предварительный расчёт сметы.</p>
       </div>
       <a href="#">ОБСУДИТЬ ЗАДАЧУ →</a>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <!-- Данные кейсов (район, площадь, формат плитки) — заготовка по структуре прототипа.
+       Перед публикацией заменить на фактические данные объектов. -->
+  <section class="pf" id="pf">
+    <div class="pf__head">
+      <div>
+        <div class="pf__marker"><b>04</b><i></i><span>Портфолио</span></div>
+        <div class="pf__title">Портфолио работ с керамогранитом</div>
+      </div>
+      <p class="pf__intro">Показываем не просто красивые фото, а задачу, формат плитки, сложность, узлы и результат.</p>
+    </div>
+
+    <div class="pf__grid">
+
+      <!-- CASE 01 — ведущий кейс -->
+      <article class="case case--lead">
+        <div class="case__ph">
+          <img src="img/work-bath-grey.jpg" alt="Ванная с душевой зоной: крупноформатный керамогранит на стенах и полу" loading="lazy">
+          <div class="grad"></div>
+          <span class="case__n cond">01</span>
+          <div class="case__obj"><b>ВАННАЯ С ДУШЕВОЙ ЗОНОЙ</b><em>ПРИМОРСКИЙ РАЙОН · САНКТ-ПЕТЕРБУРГ</em></div>
+        </div>
+        <div class="case__body">
+          <p class="case__ey">Реализованный кейс</p>
+          <p class="case__t">Керамогранит 120×260 в ванной: стены, пол и душевая зона с трапом</p>
+          <div class="case__spec">
+            <div class="r"><p>ФОРМАТ ПЛИТКИ</p><em>120×260</em></div>
+            <div class="r"><p>ЗОНА</p><em>Стены, пол, душевая</em></div>
+            <div class="r"><p>ПЛОЩАДЬ</p><em>26 м²</em></div>
+          </div>
+          <div class="case__hard">
+            <p>СЛОЖНОСТЬ</p>
+            <div class="tg">ДУШЕВАЯ ЗОНА · ТРАП · УКЛОНЫ · НИША · ЗАПИЛ 45° · ОТВЕРСТИЯ</div>
+          </div>
+          <p class="case__desc">Что сделано: подготовка основания, гидроизоляция душевой зоны, укладка стен и пола крупным форматом, уклоны к линейному трапу, ниша на запил 45°, примыкания и затирка.</p>
+          <div class="case__proof">
+            <div class="ann"><span class="dot"></span><span class="ln"></span>УКЛОН К ТРАПУ РАССЧИТАН ✓</div>
+            <div class="ann"><span class="dot"></span><span class="ln"></span>НИША СОБРАНА НА ЗАПИЛ 45° ✓</div>
+            <div class="ann"><span class="dot"></span><span class="ln"></span>ПРИМЫКАНИЯ ПРОРАБОТАНЫ ДО ОБЛИЦОВКИ ✓</div>
+          </div>
+          <a class="case__link" href="/dushevye-zony/"><b>УСЛУГА: ДУШЕВЫЕ ЗОНЫ</b><span>→</span></a>
+        </div>
+      </article>
+
+      <!-- CASE 02 -->
+      <article class="case">
+        <div class="case__ph">
+          <img src="img/work-kitchen-dark.jpg" alt="Кухня: фартук и столешница из керамогранита с книжной раскладкой" loading="lazy">
+          <div class="grad"></div>
+          <span class="case__n cond">02</span>
+          <div class="case__obj"><b>КУХНЯ · ФАРТУК И СТОЛЕШНИЦА</b><em>МОСКОВСКИЙ РАЙОН · САНКТ-ПЕТЕРБУРГ</em></div>
+        </div>
+        <div class="case__body">
+          <p class="case__t">Керамогранит 120×240 на кухне: фартук, столешница и торец барной стойки</p>
+          <div class="case__spec">
+            <div class="r"><p>ФОРМАТ ПЛИТКИ</p><em>120×240</em></div>
+            <div class="r"><p>ЗОНА</p><em>Фартук, столешница</em></div>
+            <div class="r"><p>ПЛОЩАДЬ</p><em>9 м²</em></div>
+          </div>
+          <div class="case__hard">
+            <p>СЛОЖНОСТЬ</p>
+            <div class="tg">КНИЖНАЯ РАСКЛАДКА · ЗАПИЛ 45° · ОТВЕРСТИЯ ПОД РОЗЕТКИ</div>
+          </div>
+          <p class="case__desc">Что сделано: подбор рисунка в разворот, запил 45° на торцах столешницы и барной стойки, вырезы под розетки и варочную панель, примыкание фартука к столешнице.</p>
+          <a class="case__link" href="/fartuki-iz-keramogranita/"><b>УСЛУГА: ФАРТУКИ</b><span>→</span></a>
+        </div>
+      </article>
+
+      <!-- CASE 03 -->
+      <article class="case">
+        <div class="case__ph">
+          <img src="img/work-bath-white.jpg" alt="Ванная: белый керамогранит под мрамор на стенах, полу и экране ванны" loading="lazy">
+          <div class="grad"></div>
+          <span class="case__n cond">03</span>
+          <div class="case__obj"><b>ВАННАЯ</b><em>ВАСИЛЕОСТРОВСКИЙ РАЙОН · САНКТ-ПЕТЕРБУРГ</em></div>
+        </div>
+        <div class="case__body">
+          <p class="case__t">Керамогранит 60×120 в ванной: стены, пол и экран ванны</p>
+          <div class="case__spec">
+            <div class="r"><p>ФОРМАТ ПЛИТКИ</p><em>60×120</em></div>
+            <div class="r"><p>ЗОНА</p><em>Стены, пол, экран</em></div>
+            <div class="r"><p>ПЛОЩАДЬ</p><em>18 м²</em></div>
+          </div>
+          <div class="case__hard">
+            <p>СЛОЖНОСТЬ</p>
+            <div class="tg">ЭКРАН ВАННЫ · ПРИМЫКАНИЯ К БОРТУ · ПОДРЕЗКА · СОВМЕЩЕНИЕ ШВОВ</div>
+          </div>
+          <p class="case__desc">Что сделано: раскладка с совмещением швов стены и пола, укладка крупным форматом, съёмный экран ванны из керамогранита, примыкания к борту, затирка.</p>
+          <a class="case__link" href="/ukladka-plitki-v-vannoy/"><b>УСЛУГА: ПЛИТКА В ВАННОЙ</b><span>→</span></a>
+        </div>
+      </article>
+
+      <!-- CASE 04 -->
+      <article class="case">
+        <div class="case__ph">
+          <img src="img/work-kitchen-white.jpg" alt="Кухонный фартук из крупноформатного керамогранита под белый мрамор" loading="lazy">
+          <div class="grad"></div>
+          <span class="case__n cond">04</span>
+          <div class="case__obj"><b>КУХОННЫЙ ФАРТУК</b><em>ВЫБОРГСКИЙ РАЙОН · САНКТ-ПЕТЕРБУРГ</em></div>
+        </div>
+        <div class="case__body">
+          <p class="case__t">Керамогранит 120×270 на кухне: фартук на всю стену без горизонтальных швов</p>
+          <div class="case__spec">
+            <div class="r"><p>ФОРМАТ ПЛИТКИ</p><em>120×270</em></div>
+            <div class="r"><p>ЗОНА</p><em>Фартук, стена</em></div>
+            <div class="r"><p>ПЛОЩАДЬ</p><em>7 м²</em></div>
+          </div>
+          <div class="case__hard">
+            <p>СЛОЖНОСТЬ</p>
+            <div class="tg">КРУПНЫЙ ФОРМАТ · ОТВЕРСТИЯ ПОД РОЗЕТКИ · ВЫРЕЗ ПОД ВЫТЯЖКУ</div>
+          </div>
+          <p class="case__desc">Что сделано: раскрой плит на всю высоту стены, перенос и монтаж крупного формата, вырезы под розетки и короб вытяжки, примыкание к столешнице и верхним шкафам.</p>
+          <a class="case__link" href="/ukladka-krupnoformatnogo-keramogranita/"><b>УСЛУГА: КРУПНЫЙ ФОРМАТ</b><span>→</span></a>
+        </div>
+      </article>
+
+      <!-- CASE 05 -->
+      <article class="case">
+        <div class="case__ph">
+          <img src="img/work-floor.jpg" alt="Пол из керамогранита под мрамор с диагональной раскладкой" loading="lazy">
+          <div class="grad"></div>
+          <span class="case__n cond">05</span>
+          <div class="case__obj"><b>ПОЛ В ХОЛЛЕ</b><em>ЦЕНТРАЛЬНЫЙ РАЙОН · САНКТ-ПЕТЕРБУРГ</em></div>
+        </div>
+        <div class="case__body">
+          <p class="case__t">Керамогранит 80×80 на полу: диагональная раскладка с подрезкой по периметру</p>
+          <div class="case__spec">
+            <div class="r"><p>ФОРМАТ ПЛИТКИ</p><em>80×80</em></div>
+            <div class="r"><p>ЗОНА</p><em>Пол</em></div>
+            <div class="r"><p>ПЛОЩАДЬ</p><em>22 м²</em></div>
+          </div>
+          <div class="case__hard">
+            <p>СЛОЖНОСТЬ</p>
+            <div class="tg">ДИАГОНАЛЬНАЯ РАСКЛАДКА · ПОДРЕЗКА ПО ПЕРИМЕТРУ · КОНТРОЛЬ ПЛОСКОСТИ</div>
+          </div>
+          <p class="case__desc">Что сделано: подготовка и проверка основания, раскладка по диагонали от центра помещения, подрезка по периметру и в проёмах, тонкий шов, контроль плоскости.</p>
+          <a class="case__link" href="/ukladka-keramogranita-na-pol/"><b>УСЛУГА: ПОЛЫ</b><span>→</span></a>
+        </div>
+      </article>
+
+      <!-- CASE 06 -->
+      <article class="case">
+        <div class="case__ph">
+          <img src="img/work-stairs.jpg" alt="Лестница: ступени из керамогранита и облицовка стен крупным форматом" loading="lazy">
+          <div class="grad"></div>
+          <span class="case__n cond">06</span>
+          <div class="case__obj"><b>ЛЕСТНИЦА</b><em>КУРОРТНЫЙ РАЙОН · ЛЕНИНГРАДСКАЯ ОБЛАСТЬ</em></div>
+        </div>
+        <div class="case__body">
+          <p class="case__t">Керамогранит на лестнице: ступени, подступёнки и облицовка стен</p>
+          <div class="case__spec">
+            <div class="r"><p>ФОРМАТ ПЛИТКИ</p><em>30×120 / 120×260</em></div>
+            <div class="r"><p>ЗОНА</p><em>Ступени, стены</em></div>
+            <div class="r"><p>ПЛОЩАДЬ</p><em>31 м²</em></div>
+          </div>
+          <div class="case__hard">
+            <p>СЛОЖНОСТЬ</p>
+            <div class="tg">РАСКРОЙ СТУПЕНЕЙ · ПРОФИЛЬ И ПОДСВЕТКА · ПРИМЫКАНИЯ · ПОДРЕЗКИ</div>
+          </div>
+          <p class="case__desc">Что сделано: раскрой ступеней и подступёнков по факту замера, установка профилей и подсветки, облицовка стен крупным форматом, примыкания к косоуру и ограждению.</p>
+          <a class="case__link" href="/lestnicy-krylca-iz-keramogranita/"><b>УСЛУГА: ЛЕСТНИЦЫ И КРЫЛЬЦА</b><span>→</span></a>
+        </div>
+      </article>
+
+      <!-- CTA -->
+      <div class="pf__cta">
+        <div class="bp"><img src="img/figma/trust-blueprint.png" alt=""></div>
+        <div>
+          <p class="ey">ДОКАЗАТЕЛЬСТВА</p>
+          <h4>Фото до и после, макро швов, углов, запилов и отверстий</h4>
+          <p class="p">В полном портфолио по каждому объекту показываем общий вид и фото деталей: зону, формат плитки, сложные узлы и состав выполненных работ.</p>
+          <div class="pr">
+            <div class="ann"><span class="dot"></span><span class="ln"></span>ОБЩИЙ ВИД ОБЪЕКТА</div>
+            <div class="ann"><span class="dot"></span><span class="ln"></span>ФОТО ДО И ПОСЛЕ</div>
+            <div class="ann"><span class="dot"></span><span class="ln"></span>МАКРО ШВОВ И УГЛОВ</div>
+            <div class="ann"><span class="dot"></span><span class="ln"></span>ЗАПИЛЫ И ОТВЕРСТИЯ</div>
+            <div class="ann"><span class="dot"></span><span class="ln"></span>ТРАПЫ, УКЛОНЫ И ПРИМЫКАНИЯ</div>
+          </div>
+        </div>
+        <div class="act">
+          <a class="btn" href="/portfolio/">СМОТРЕТЬ ПОРТФОЛИО →</a>
+          <a class="lnk" href="/portfolio/">Посмотреть похожие работы →</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
